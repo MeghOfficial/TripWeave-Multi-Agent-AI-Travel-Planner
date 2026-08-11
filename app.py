@@ -10,6 +10,10 @@ from pydantic import BaseModel
 
 from backend import run_travel_agent
 
+# allow nested event loops for async calls in FastAPI
+import nest_asyncio
+nest_asyncio.apply() 
+
 
 # Get the project folder path
 BASE_DIR = Path(__file__).resolve().parent
